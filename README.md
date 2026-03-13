@@ -1,4 +1,4 @@
-
+# Laboratório de Servidor DNS Autoritativo (Bind9)🌐
 Este repositório contém o passo a passo de um laboratório de infraestrutura focado na implementação e configuração de um servidor DNS privado utilizando o software Bind9 entre máquinas virtuais Linux (Ubuntu Server) em ambiente QEMU/KVM.
 
 ### 📋 Objetivos do Lab
