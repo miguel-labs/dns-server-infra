@@ -101,7 +101,7 @@ Troque o `ip_doserver` pelo IP da máquina que esta hospedando o servidor, abaix
 
 ![Exemplo Bloco Registros](Screenshots/bloco-registros.png)
 
-**Validação do arquivo de zona:**
+**Validação do arquivo de zona**
 Sempre verifique se há erros de sintaxe antes de reiniciar:
 ```
 sudo named-checkzone lab.com /etc/bind/db.lab.com
@@ -131,7 +131,7 @@ dig @ip_do_server server1.lab.com
 
 O retorno deve mostrar a ANSWER SECTION com o IP correto do servidor, comprovando que o Bind9 resolveu o nome com sucesso.
 
-**Resultado da consulta via DIG**
+**Resultado da consulta via DIG:**
 
 ![Resultado da consulta via DIG](Screenshots/dig.png)
 
