@@ -27,7 +27,9 @@ sudo systemctl status bind9
 ```
 O serviço deve constar como "active (running)" como no exemplo abaixo:
 Status do Bind9 no Servidor:
+
 **Status do Bind9**
+
 ![Status do Bind9](Screenshot/bind9-status.png)
 
 ##  2. Configuração de Opções e Forwarders (No Servidor)
@@ -44,7 +46,9 @@ forwarders {
 };
 ```
 Esse processo garante que sua rede continue acessando a internet externa.
+
 **Exemplo Bloco Forwarders**
+
 ![Exemplo Bloco Forwarders](Screenshots/bloco-forwarders.png)
 
 ##  3. Definição da Zona Local (No Servidor)
@@ -60,7 +64,9 @@ zone "lab.com" {
     file "/etc/bind/db.lab.com";
 };
 ```
+
 **Exemplo Bloco Zone**
+
 ![Exemplo Bloco Zone](Screenshots/bloco-zone.png)
 
 ##  4. Criação do Banco de Dados de Nomes (No Servidor)
@@ -92,6 +98,7 @@ server1 IN      A       ip_doserver
 Troque o `ip_doserver` pelo IP da máquina que esta hospedando o servidor, abaixo da linha do `server1` você pode adicionar as suas máquinas
 
 **Exemplo Bloco Registros**
+
 ![Exemplo Bloco Registros](Screenshots/bloco-registros.png)
 
 **Validação do arquivo de zona:**
@@ -111,7 +118,9 @@ Vamos configurar o arquivo da seguinte maneira:
 nameserver ip_doserver
 search lab.com
 ```
+
 **Exemplo da Config**
+
 ![Exemplo da Config](Screenshots/config-clientvm.png)
 
 Para validar vamos utilizar a ferramenta `dig`
@@ -121,7 +130,9 @@ dig @ip_do_server server1.lab.com
 ```
 
 O retorno deve mostrar a ANSWER SECTION com o IP correto do servidor, comprovando que o Bind9 resolveu o nome com sucesso.
+
 **Resultado da consulta via DIG**
+
 ![Resultado da consulta via DIG](Screenshots/dig.png)
 
 ##  📝 Conclusão
