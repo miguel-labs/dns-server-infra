@@ -106,7 +106,7 @@ Sempre verifique se há erros de sintaxe antes de reiniciar:
 ```
 sudo named-checkzone lab.com /etc/bind/db.lab.com
 ```
-Se retornar "OK" está tudo certo, caso contrario verifique o arquivo
+Se retornar "OK" está tudo certo, caso contrário verifique o arquivo
 
 ## 5. Validação com o Cliente (Na Máquina Cliente)
 Para o teste final, vamos configurar o cliente para usar o IP do nosso servidor no arquivo `/etc/resolv.conf` com o seguinte comando:
