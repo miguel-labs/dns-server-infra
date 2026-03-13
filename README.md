@@ -30,7 +30,7 @@ Status do Bind9 no Servidor:
 
 **Status do Bind9**
 
-![Status do Bind9](Screenshot/bind9-status.png)
+![Status do Bind9](Screenshots/bind9-status.png)
 
 ##  2. Configuração de Opções e Forwarders (No Servidor)
 Vamos configurar o servidor para que ele saiba o que fazer quando não conhecer um domínio (enviando para o DNS do Google):
