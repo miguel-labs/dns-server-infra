@@ -95,7 +95,7 @@ server1 IN      A       ip_doserver
 
 ```
 ***Atenção:***
-Troque o `ip_doserver` pelo IP da máquina que esta hospedando o servidor, abaixo da linha do `server1` você pode adicionar as suas máquinas
+Troque o `ip_doserver` pelo IP da máquina que está hospedando o servidor, abaixo da linha do `server1` você pode adicionar as suas máquinas
 
 **Exemplo Bloco Registros:**
 
@@ -106,7 +106,7 @@ Sempre verifique se há erros de sintaxe antes de reiniciar:
 ```
 sudo named-checkzone lab.com /etc/bind/db.lab.com
 ```
-Se retornar "OK" esta tudo certo, caso contrario verifique o arquivo
+Se retornar "OK" está tudo certo, caso contrario verifique o arquivo
 
 ## 5. Validação com o Cliente (Na Máquina Cliente)
 Para o teste final, vamos configurar o cliente para usar o IP do nosso servidor no arquivo `/etc/resolv.conf` com o seguinte comando:
@@ -126,7 +126,7 @@ search lab.com
 Para validar vamos utilizar a ferramenta `dig`
 Execução do teste de consulta:
 ```
-dig @ip_do_server server1.lab.com
+dig @ip_doserver server1.lab.com
 ```
 
 O retorno deve mostrar a ANSWER SECTION com o IP correto do servidor, comprovando que o Bind9 resolveu o nome com sucesso.
