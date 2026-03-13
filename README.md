@@ -64,7 +64,7 @@ zone "lab.com" {
     file "/etc/bind/db.lab.com";
 };
 ```
-Agora reinicialize o Bind9
+Agora reinicialize o Bind9:
 ```
 sudo systemctl restart bind9
 ```
