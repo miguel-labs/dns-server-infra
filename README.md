@@ -27,7 +27,7 @@ sudo systemctl status bind9
 ```
 O serviço deve constar como "active (running)" como no exemplo abaixo:
 Status do Bind9 no Servidor:
-![Status do Bind9](screenshot/bind9-status.png)
+![Status do Bind9](Screenshot/bind9-status.png)
 
 ##  2. Configuração de Opções e Forwarders (No Servidor)
 Vamos configurar o servidor para que ele saiba o que fazer quando não conhecer um domínio (enviando para o DNS do Google):
@@ -44,7 +44,7 @@ forwarders {
 ```
 Esse processo garante que sua rede continue acessando a internet externa.
 
-![Exemplo Bloco Forwarders](screenshots/bloco-forwarders.png)
+![Exemplo Bloco Forwarders](Screenshots/bloco-forwarders.png)
 
 ##  3. Definição da Zona Local (No Servidor)
 Agora vamos declarar que este servidor manda no domínio lab.com:
@@ -59,7 +59,7 @@ zone "lab.com" {
     file "/etc/bind/db.lab.com";
 };
 ```
-![Exemplo Bloco Zone](screenshots/bloco-zone.png)
+![Exemplo Bloco Zone](Screenshots/bloco-zone.png)
 
 ##  4. Criação do Banco de Dados de Nomes (No Servidor)
 Vamos criar o arquivo que relaciona os nomes aos IPs. Primeiro, copiamos o modelo padrão:
@@ -89,7 +89,7 @@ server1 IN      A       ip_doserver
 ***Atenção:***
 Troque o `ip_doserver` pelo IP da máquina que esta hospedando o servidor, abaixo da linha do `server1` você pode adicionar as suas máquinas
 
-![Exemplo Bloco Registros](screenshots/bloco-registros.png)
+![Exemplo Bloco Registros](Screenshots/bloco-registros.png)
 
 **Validação do arquivo de zona:**
 Sempre verifique se há erros de sintaxe antes de reiniciar:
@@ -108,7 +108,7 @@ Vamos configurar o arquivo da seguinte maneira:
 nameserver ip_doserver
 search lab.com
 ```
-![Exemplo da Config](screenshots/config-clientvm.png)
+![Exemplo da Config](Screenshots/config-clientvm.png)
 
 Para validar vamos utilizar a ferramenta `dig`
 Execução do teste de consulta:
@@ -117,7 +117,7 @@ dig @ip_do_server server1.lab.com
 ```
 
 O retorno deve mostrar a ANSWER SECTION com o IP correto do servidor, comprovando que o Bind9 resolveu o nome com sucesso.
-![Resultado da consulta via DIG](screenshots/dig.png)
+![Resultado da consulta via DIG](Screenshots/dig.png)
 
 ##  📝 Conclusão
 O laboratório demonstra a importância do DNS na infraestrutura de TI. A transição do uso de IPs brutos para nomes de domínio facilita a administração de sistemas e a escalabilidade da rede, permitindo o gerenciamento centralizado de endereços.
