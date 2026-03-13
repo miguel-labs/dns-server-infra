@@ -47,7 +47,7 @@ forwarders {
 ```
 Esse processo garante que sua rede continue acessando a internet externa.
 
-**Exemplo Bloco Forwarders**
+**Exemplo Bloco Forwarders:**
 
 ![Exemplo Bloco Forwarders](Screenshots/bloco-forwarders.png)
 
@@ -65,7 +65,7 @@ zone "lab.com" {
 };
 ```
 
-**Exemplo Bloco Zone**
+**Exemplo Bloco Zone:**
 
 ![Exemplo Bloco Zone](Screenshots/bloco-zone.png)
 
@@ -97,7 +97,7 @@ server1 IN      A       ip_doserver
 ***Atenção:***
 Troque o `ip_doserver` pelo IP da máquina que esta hospedando o servidor, abaixo da linha do `server1` você pode adicionar as suas máquinas
 
-**Exemplo Bloco Registros**
+**Exemplo Bloco Registros:**
 
 ![Exemplo Bloco Registros](Screenshots/bloco-registros.png)
 
@@ -119,7 +119,7 @@ nameserver ip_doserver
 search lab.com
 ```
 
-**Exemplo da Config**
+**Exemplo da Config:**
 
 ![Exemplo da Config](Screenshots/config-clientvm.png)
 
